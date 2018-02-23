@@ -1,0 +1,4 @@
+build/
+dist/
+django_datatools.egg-info/
+.idea/
