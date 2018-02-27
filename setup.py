@@ -1,20 +1,5 @@
 import os
-from setuptools import setup
-
-classifiers = [
-    'Development Status :: 4 - Beta',
-    'Intended Audience :: Developers',
-    'License :: OSI Approved :: MIT License',
-    'Operating System :: POSIX',
-    'Operating System :: Microsoft :: Windows',
-    'Operating System :: MacOS :: MacOS X',
-    'Topic :: Software Development :: Testing',
-    'Topic :: Software Development :: Libraries',
-    'Topic :: Utilities',
-    'Programming Language :: Python :: Implementation :: CPython',
-    'Programming Language :: Python :: Implementation :: PyPy'] + [
-    ('Programming Language :: Python :: %s' % x) for x in
-    '2 2.7 3 3.4 3.5 3.6'.split()]
+from setuptools import setup, find_packages
 
 with open('README.rst') as fd:
     long_description = fd.read()
@@ -34,6 +19,7 @@ def main():
     setup(
         name='django-datatools',
         description='Data Tools for Django models',
+        include_package_data=True,
         long_description=long_description,
         version=get_version(),
         license='MIT license',
@@ -41,8 +27,8 @@ def main():
         author='Michael Chiciak',
         author_email='mchicia1@gmail.com',
         url='https://github.com/pytest-dev/pluggy',
-        python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
-        packages=['django_datatools'],
+        python_requires='>=3.0',
+        packages=find_packages(),
     )
 
 
