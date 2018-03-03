@@ -26,7 +26,7 @@ def main():
         platforms=['unix', 'linux', 'osx', 'win32'],
         author='Michael Chiciak',
         author_email='mchicia1@gmail.com',
-        url='https://github.com/pytest-dev/pluggy',
+        url='https://github.com/MChiciak/django-datatools',
         python_requires='>=3.0',
         packages=find_packages(),
     )
